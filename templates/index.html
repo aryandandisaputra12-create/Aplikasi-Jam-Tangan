@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Daftar Jam Tangan</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Harga (Rp)</th>
+        <th>Stok</th>
+        <th>Aksi</th>
+    </tr>
+    {% for j in data %}
+    <tr>
+        <td>{{ j.id }}</td>
+        <td>{{ j.nama }}</td>
+        <td>{{ "{:,.0f}".format(j.harga) }}</td>
+        <td>{{ j.stok }}</td>
+        <td><a href="{{ url_for('hapus', id=j.id) }}">Hapus</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

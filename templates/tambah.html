@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Tambah Jam Tangan</h2>
+<form method="POST">
+    <label>Nama:</label><br>
+    <input type="text" name="nama" required><br><br>
+    <label>Harga:</label><br>
+    <input type="number" name="harga" required><br><br>
+    <label>Stok:</label><br>
+    <input type="number" name="stok" required><br><br>
+    <button type="submit">Simpan</button>
+</form>
+{% endblock %}

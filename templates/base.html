@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Penjualan Jam Tangan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🕒 Penjualan Jam Tangan</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Beranda</a>
+            <a href="{{ url_for('tambah') }}">Tambah Produk</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Toko Jam Tangan</p>
+    </footer>
+</body>
+</html>
